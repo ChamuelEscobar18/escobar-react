@@ -5,14 +5,6 @@ export default function App() {
   const [cookies, setCookies] = useState([
   ]);
 
-  useEffect(() => {
-    const selectedCookies = localStorage.getItem("cookies");
-    if (selectedCookies) {
-      setCookies(JSON.parse(selectedCookies));
-    }
-  }, []);
-
-
   const submit = (e) => {
     e.preventDefault();
     const CookieName = document.getElementById("inpt-CookieName").value;
