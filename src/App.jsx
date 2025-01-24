@@ -6,13 +6,9 @@ export default function App() {
   ]);
 
   useEffect(() => {
-    const cookies = localStorage.getItem("cookies")
-    if (cookies) {
-
-    }
+    const selectedCookies = localStorage.getItem('cookies');
   }, []);
-
-
+  
   const submit = (e) => {
     e.preventDefault();
     const CookieName = document.getElementById("inpt-CookieName").value;
@@ -53,7 +49,7 @@ export default function App() {
 
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', marginTop: 10 }}>
             <label>Rarity:</label>
-            <select defaultValue="" id='inpt-Rarity' required style={{ width: 173, display: 'flex', justifyContent: 'center', marginLeft: 0, marginRight: -4., borderRadius: 15,fontSize: 25}}>
+            <select id='inpt-Rarity' required style={{ width: 173, display: 'flex', justifyContent: 'center', marginLeft: 0, marginRight: -4., borderRadius: 15,fontSize: 25}}>
               <option value="" disabled selected></option>
               <option value="Common" style={{fontSize: 25}}>Common</option>
               <option value="Rare"style={{fontSize: 25}}>Rare</option>
